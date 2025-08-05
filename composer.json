@@ -1,0 +1,94 @@
+{
+    "name": "autodudes/sitepackage",
+    "type": "typo3-cms-extension",
+    "description": "Basic configuration for TYPO3 installation.",
+    "homepage": "https://www.autodudes.de",
+    "license": [
+        "GPL-2.0-or-later"
+    ],
+    "keywords": [
+        "TYPO3 CMS"
+    ],
+    "version": "12.4.1",
+    "require": {
+        "b13/container": "^3.0",
+        "bk2k/bootstrap-package": "^15.0",
+        "contentblocks/content-blocks": "^1.3",
+        "helhum/typo3-console": "^8.2",
+        "typo3/cms-about": "^13.4",
+        "typo3/cms-backend": "^13.4",
+        "typo3/cms-belog": "^13.4",
+        "typo3/cms-beuser": "^13.4",
+        "typo3/cms-core": "^13.4",
+        "typo3/cms-extbase": "^13.4",
+        "typo3/cms-extensionmanager": "^13.4",
+        "typo3/cms-filelist": "^13.4",
+        "typo3/cms-filemetadata": "^13.4",
+        "typo3/cms-fluid": "^13.4",
+        "typo3/cms-fluid-styled-content": "^13.4",
+        "typo3/cms-frontend": "^13.4",
+        "typo3/cms-info": "^13.4",
+        "typo3/cms-install": "^13.4",
+        "typo3/cms-lowlevel": "^13.4",
+        "typo3/cms-recordlist": "^13.4",
+        "typo3/cms-rte-ckeditor": "^13.4",
+        "typo3/cms-seo": "^13.4",
+        "typo3/cms-setup": "^13.4",
+        "typo3/cms-sys-note": "^13.4",
+        "typo3/cms-t3editor": "^13.4",
+        "typo3/cms-tstemplate": "^13.4",
+        "typo3/cms-viewpage": "^13.4"
+    },
+    "require-dev": {
+        "php": "8.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "AutoDudes\\Sitepackage\\": "Classes/"
+        }
+    },
+    "prefer-stable": true,
+    "config": {
+      "bin-dir": ".typo3/bin",
+      "vendor-dir": ".typo3/vendor",
+      "platform": {
+        "php": "8.3"
+      },
+      "sort-packages": true,
+        "allow-plugins": {
+            "typo3/class-alias-loader": true,
+            "typo3/cms-composer-installers": true,
+            "phpstan/extension-installer": true
+        }
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "sitepackage",
+            "web-dir": ".typo3/public",
+            "app-dir": ".typo3"
+        },
+        "helhum/typo3-console": {
+            "install-extension-dummy": false
+        }
+    },
+    "scripts": {
+        "typo3-cms-scripts": [
+            "typo3 install:fixfolderstructure",
+            "typo3 database:updateschema",
+            "typo3 configuration:set EXTENSIONS/bootstrap_package/disableGoogleFontCaching '1'",
+            "typo3 configuration:set EXTCONF/lang/availableLanguages '[\"de\"]' --json",
+            "typo3 configuration:set SYS/phpTimeZone 'Europe/Berlin'",
+            "typo3 cache:flush",
+            "typo3 cache:warmup"
+        ],
+        "custom-extension-install": [
+            "[ -L Resources/Public/Scss/BootstrapScssTheme ] || ( ln -snvf ../../../.typo3/vendor/bk2k/bootstrap-package/Resources/Public/Scss/bootstrap5 Resources/Public/Scss/BootstrapScssTheme )",
+            "[ -d config/ ] || ( mkdir -p config)",
+            "[ -L .typo3/public/.htaccess ] || ( ln -snvf ../../Build/.public-htaccess .typo3/public/.htaccess )"
+        ],
+        "post-autoload-dump": [
+            "@custom-extension-install",
+            "@typo3-cms-scripts"
+        ]
+    }
+}

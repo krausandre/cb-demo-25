@@ -1,0 +1,11 @@
+######################
+#### BASICS       ####
+######################
+@import 'EXT:sitepackage/Configuration/TypoScript/Basics/setup.typoscript'
+@import 'EXT:sitepackage/Configuration/TypoScript/Extension/ContentBlocks/setup.typoscript'
+
+
+# customization for dev environment
+[applicationContext == "Development"]
+    config.contentObjectExceptionHandler = 0
+[END]

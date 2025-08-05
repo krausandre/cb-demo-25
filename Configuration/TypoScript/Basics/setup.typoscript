@@ -1,0 +1,13 @@
+######################
+#### DEPENDENCIES ####
+######################
+@import 'EXT:bootstrap_package/Configuration/TypoScript/setup.typoscript'
+
+##############
+#### PAGE ####
+##############
+page {
+    includeCSS {
+        theme = EXT:sitepackage/Resources/Public/Scss/Theme/theme.scss
+    }
+}

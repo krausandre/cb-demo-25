@@ -1,0 +1,15 @@
+#
+# TCEFORM
+#
+TCEFORM {
+    pages {
+
+    }
+    tt_content {
+        frame_class {
+            addItems{
+                no-header = Icon Group, no icon header
+            }
+        }
+    }
+}

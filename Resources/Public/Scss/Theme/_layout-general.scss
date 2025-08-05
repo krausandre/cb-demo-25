@@ -1,0 +1,111 @@
+/* Fix for external media YouTube vs. usercentrics rendering  */
+.frame-type-external_media .embed-responsive .uc-embedding-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Styling for carousel Heder.html  */
+.carousel {
+  .carousel-text-inner {
+    span {
+      display: block;
+
+      &.carousel-header{
+        @extend .display-1;
+        font-weight: 700;
+      }
+
+      &.carousel-subheader{
+        @extend .display-2;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+
+/*
+.std-content-background {
+  background-color: $ce-std-background;
+}
+
+.bp-page-content.main-section{
+  margin-top: 40%;
+}
+
+@media (min-width: ($grid-float-breakpoint)) {
+  margin-top: 15%;
+}
+
+.section-column-fourth {
+  @extend .std-content-background;
+  @include media-breakpoint-up('md') {
+    width: 48%;
+    margin: 0 1%;
+    padding: 0;
+    border-top-left-radius: 15px;
+  }
+  @include media-breakpoint-up('lg') {
+    width: 23%;
+    margin: 0 1%;
+  }
+}
+
+.frame {
+  padding-top: 0;
+}
+
+.main-section .frame-container {
+  @extend .std-content-background;
+  padding-bottom: $ce-std-padding-bottom;
+}
+
+
+// desktop
+@media (min-width: ($grid-float-breakpoint)) {
+  .bp-page-content.main-section{
+    margin-top: 28%;
+  }
+}
+
+.main-section .section-column-fourth .frame-container {background: none;}
+*/
+
+.fileCopyNotice, .fileCopyNotice.bgimage {
+  display: inline-block;
+  background: rgba(0, 0, 0, .4);
+  color: #fff;
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  padding: 1px 5px;
+  font-size: 10px;
+}
+figure.image {
+  position: relative;
+  .fileCopyNotice {
+      bottom: unset;
+      top: 5px;
+  }
+}
+
+/* Usercentrics colors */
+.uc-embedding-buttons .uc-embedding-accept {
+  background-color: $primary;
+  color: #fff;
+  &:hover {
+      background-color: darken($primary, 15%);
+  }
+}
+
+
+/* Footer meta nav SEO Lighthouse test */
+.footer-section-meta .meta-menu li a:not(.btn),
+.icongroup .icongroup-item a:not(.btn) {
+    padding: 15px 0;
+}

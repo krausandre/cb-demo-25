@@ -1,0 +1,41 @@
+.DS_Store
+.idea
+.typo3
+var
+!config
+config/*
+!config/system
+config/system/*
+!config/system/additional.php
+config/system/settings.php
+!config/sites
+
+# Config for DDEV
+
+
+!.ddev
+.ddev/*
+!.ddev/config.yaml
+!.ddev/providers
+.ddev/providers/*
+!.ddev/providers/prod.yaml
+!.ddev/commands
+.ddev/commands/*
+!.ddev/commands/host
+!.ddev/commands/web
+.ddev/commands/host/phpmyadmin
+.ddev/commands/host/*.txt
+.ddev/commands/web/*.txt
+# Add the Build directory
+!Build/Development/.ddev
+
+# Config for DDEV END
+
+composer.lock
+
+db-dump.sql
+Build/Development/db-dump.sql
+Resources/Public/Scss/BootstrapScssTheme
+
+/temp/*
+**.sql.gz

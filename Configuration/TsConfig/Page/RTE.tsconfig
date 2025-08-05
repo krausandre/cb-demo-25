@@ -1,0 +1,9 @@
+#############
+#### RTE ####
+#############
+RTE {
+    default {
+        preset = sitepackage
+        buttons.link.options.removeItems = folder
+    }
+}

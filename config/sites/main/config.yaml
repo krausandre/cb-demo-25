@@ -1,0 +1,40 @@
+base: 'https://cb-demo-25.ddev.site/'
+baseVariants:
+    -
+        base: 'https://cb-demo-25.ddev.site/'
+        condition: 'applicationContext == "Development"'
+errorHandling:
+    -
+        errorCode: 404
+        errorHandler: Page
+        errorContentSource: 't3://page?uid=7'
+    -
+        errorCode: 403
+        errorHandler: Page
+        errorContentSource: 't3://page?uid=7'
+languages:
+    -
+        title: Deutsch
+        enabled: true
+        languageId: 0
+        base: /
+        typo3Language: de
+        locale: de_DE.UTF-8
+        iso-639-1: de
+        navigationTitle: Deutsch
+        hreflang: de-de
+        direction: ltr
+        flag: de
+rootPageId: 1
+routeEnhancers:
+    PageTypeSuffix:
+        type: PageType
+        map:
+            sitemap.xml: 1533906435
+routes:
+    -
+        route: robots.txt
+        type: staticText
+        # TODO: replace "www.NEW-DOMAIN.de" with LIVEDOMAIN
+        content: "User-Agent: *\r\nAllow: /\r\n\r\n# folders\r\nDisallow: /node_modules/\r\nDisallow: /sources/\r\nDisallow: /t3lib/\r\nDisallow: /typo3/\r\nDisallow: /typo3conf/\r\nDisallow: /fileadmin/newsletter/\r\nAllow: /typo3conf/ext/\r\nAllow: /typo3temp/\r\n\r\n# parameters\r\nDisallow: /*?id=*               # non-realurl URLs\r\n#Disallow: /*cHash               # no cHash\r\nDisallow: /*tx_powermail_pi1    # no powermail thanks pages\r\n\r\n# sitemap\r\nSitemap: https://www.LIVEDOMAIN.de/sitemap.xml"
+websiteTitle: 'Content Blocks Demo 25'

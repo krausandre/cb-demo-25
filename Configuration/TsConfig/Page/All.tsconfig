@@ -1,0 +1,42 @@
+#
+# PageTS for Sitepackage
+#
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:sitepackage/Configuration/TsConfig/Page/RTE.tsconfig">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:sitepackage/Configuration/TsConfig/Page/TCEFORM.tsconfig">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:sitepackage/Configuration/TsConfig/Page/TCEMAIN.tsconfig">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:sitepackage/Configuration/TsConfig/Page/Mod/WebLayout/BackendLayouts.tsconfig">
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:sitepackage/Configuration/TsConfig/Page/ContentElement/Element" extensions="tsconfig">
+
+mod.SHARED {
+	defaultLanguageFlag = de
+	defaultLanguageLabel = Deutsch
+}
+
+
+
+#########################
+### LANGUAGE HANDLING ###
+#########################
+
+# Localization:
+#default-Konfiguration
+config.sys_language_uid = 0
+config.language = de
+config.locale_all = de_DE
+config.htmlTag_langKey = de
+
+[siteLanguage("languageId") == "0"]
+	# Configuration if &L=0
+	config.sys_language_uid = 1
+	config.language = de
+	config.locale_all = de_DE
+	config.htmlTag_langKey = de
+[global]
+
+[siteLanguage("languageId") == "1"]
+	# Configuration if &L=1
+	config.sys_language_uid = 0
+	config.language = en
+	config.locale_all = en_EN
+	config.htmlTag_langKey = en
+[global]

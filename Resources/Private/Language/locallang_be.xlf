@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2019-06-14UTC21:34:060">
+        <header>
+            <authorName>Andre Kraus</authorName>
+            <authorEmail>service@autodudes.de</authorEmail>
+        </header>
+        <body>
+            <trans-unit id="backend_layout.example">
+                <source>Example</source>
+            </trans-unit>
+            <trans-unit id="backend_layout.column.normal">
+                <source>Normal</source>
+            </trans-unit>
+            <trans-unit id="backend_layout.andrekraus_start">
+                <source>Individuelles Startseite Layout</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

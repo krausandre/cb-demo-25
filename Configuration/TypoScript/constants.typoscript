@@ -1,0 +1,30 @@
+######################
+#### BASICS       ####
+######################
+@import 'EXT:sitepackage/Configuration/TypoScript/Basics/constants.typoscript'
+
+
+############
+### PAGE ###
+############
+page {
+    logo {
+        file = EXT:sitepackage/Resources/Public/Images/logo.svg
+        fileInverted = EXT:sitepackage/Resources/Public/Images/logo-inverted.svg
+        height = 192
+        width = 192
+        alt = CB DEM
+        linktitle = CB DEMO
+    }
+}
+
+
+#########################
+### BASIC CONFIG      ###
+#########################
+
+config{
+    # removeDefaultJS = 1
+    compressJs = 1
+    compressCss = 1
+}

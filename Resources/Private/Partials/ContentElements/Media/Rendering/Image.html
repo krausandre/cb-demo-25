@@ -1,0 +1,41 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:bk2k="http://typo3.org/ns/BK2K/BootstrapPackage/ViewHelpers" xmlns:cc="http://typo3.org/ns/CoelnConcept/CcImage/ViewHelpers" data-namespace-typo3-fluid="true">
+<picture>
+<f:spaceless>
+	<f:if condition="{file.properties.width} && ({file.properties.mime_type} == 'image/jpeg' || {file.properties.mime_type} == 'image/png' || {file.properties.mime_type} == 'image/webp')">
+
+        <f:for each="{variants}" key="name" as="variant">
+            <f:variable name="breakpoint">{variant.breakpoint as integer}</f:variable>
+            <f:variable name="width">{variant.width as integer}</f:variable>
+            <f:if condition="{width}">
+                <f:variable name="mediaQuery">{f:if(condition: breakpoint, then: 'media="(min-width: {breakpoint}px)"')}</f:variable>
+                <f:if condition="{variant.sizes}">
+                    <f:variable name="srcset" value="" />
+                    <f:variable name="srcsetWebP" value="" />
+                    <f:for each="{variant.sizes}" key="sizeKey" as="sizeConfig" iteration="iteration">
+                        <f:variable name="sizeWidth">{sizeConfig.multiplier as float}</f:variable>
+                        <f:variable name="sizeWidth">{sizeWidth * width}</f:variable>
+                        <f:variable name="srcset">{srcset}{f:uri.image(image: file, cropVariant: name, maxWidth: sizeWidth)} {sizeKey}{f:if(condition: iteration.isLast, else: ',')}</f:variable>
+                        <f:variable name="srcsetWebP" value="{f:uri.image(image: file, cropVariant: name, maxWidth: sizeWidth)}" />
+                    </f:for>
+                </f:if>
+                <f:comment><![CDATA[ <!-- <source media="(min-width: {deviceWidth}px)" srcset="{cc:uri.image(image:file, maxWidth:imageWidth.1, fileExtension:'webp')}{f:if(condition:'{imageWidth.2} && {file.properties.width} >= {deviceWidth}', then:', {cc:uri.image(image:file, maxWidth:imageWidth.2, fileExtension:\'webp\')} 2x')}" type="image/webp" /> --->  ]]></f:comment>
+                <source data-variant="{name}" data-maxwidth="{width}" {mediaQuery->f:format.raw()} srcset="{cc:uri.image(image:file, cropVariant:name, maxWidth:width, fileExtension:'webp')}" type="image/webp" />
+                <source data-variant="{name}" data-maxwidth="{width}" {mediaQuery->f:format.raw()} srcset="{srcset}">
+            </f:if>
+        </f:for>
+	</f:if>
+
+	<f:if condition="{file.originalFile.properties.mime_type} == 'image/svg+xml'">
+		<f:then>
+			<bk2k:inlineSvg image="{file}" />
+		</f:then>
+		<f:else>
+			<f:media class="image-embed-item" file="{file}" width="{dimensions.width}" height="{dimensions.height}" alt="{file.alternative}" title="{file.title}" loading="{settings.media.lazyLoading}" />
+		</f:else>
+	</f:if>
+</f:spaceless>
+</picture>
+<f:if condition="{file.properties.copyright} || {file.properties.copyright_notice}">
+    <span class="fileCopyNotice content-image{f:if(condition: file.properties.description, then: ' has-description', else: '')}">&copy; {f:if(condition: file.properties.copyright, then: file.properties.copyright, else: file.properties.copyright_notice)}</span>
+</f:if>
+</html>

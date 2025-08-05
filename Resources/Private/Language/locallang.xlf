@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2019-06-14UTC21:34:060">
+        <header>
+            <authorName>Andre Kraus</authorName>
+            <authorEmail>service@autodudes.de</authorEmail>
+        </header>
+        <body>
+
+            <trans-unit id="skiptomaincontent">
+                <source>Zum Hauptinhalt</source>
+            </trans-unit>
+
+            <trans-unit id="skipnavigation">
+                <source>Navigation Block überspringen</source>
+            </trans-unit>
+
+            <trans-unit id="scrolltop">
+                <source>Zum Anfang scrollen</source>
+            </trans-unit>
+
+            <trans-unit id="linktop">
+                <source>Zum Anfang</source>
+            </trans-unit>
+
+            <trans-unit id="breadcrumb">
+                <source>Du befindest dich hier:</source>
+            </trans-unit>
+
+            <trans-unit id="previous">
+                <source>Zurück</source>
+            </trans-unit>
+
+            <trans-unit id="next">
+                <source>Weiter</source>
+            </trans-unit>
+
+            <trans-unit id="readmore">
+                <source>Mehr dazu lesen</source>
+            </trans-unit>
+
+            <trans-unit id="externalmediaunsupported">
+                <source>Diese externe Medienquelle %s wird nicht unterstützt. Bitte verwende eine YouTube oder Vimeo URL.</source>
+            </trans-unit>
+
+            <trans-unit id="form.browse">
+                <source>Browse</source>
+            </trans-unit>
+            <trans-unit id="form.selectfile">
+                <source>Datei auswählen</source>
+            </trans-unit>
+
+            <trans-unit id="element.contactform.renderingOptions.submitButtonLabel">
+                <source>Absenden</source>
+            </trans-unit>
+            <trans-unit id="contactform.element.mandatory.properties.label">
+                <source>Deine persönlichen Daten</source>
+            </trans-unit>
+            <trans-unit id="contactform.element.mandatory.properties.text">
+                <source>* Pflichtfeld</source>
+            </trans-unit>
+            <trans-unit id="contactform.element.fullname.properties.label">
+                <source>Name und Vorname</source>
+            </trans-unit>
+            <trans-unit id="contactform.element.fullname.properties.placeholder">
+                <source>Name und Vorname</source>
+            </trans-unit>
+            <trans-unit id="contactform.element.company.properties.label">
+                <source>Firma</source>
+            </trans-unit>
+            <trans-unit id="contactform.element.company.properties.placeholder">
+                <source>Firma</source>
+            </trans-unit>
+            <trans-unit id="contactform.element.email.properties.label">
+                <source>E-Mail</source>
+            </trans-unit>
+            <trans-unit id="contactform.element.email.properties.placeholder">
+                <source>E-Mail</source>
+            </trans-unit>
+            <trans-unit id="contactform.element.subject.properties.label">
+                <source>Betreff</source>
+            </trans-unit>
+            <trans-unit id="contactform.element.subject.properties.placeholder">
+                <source>Betreff</source>
+            </trans-unit>
+            <trans-unit id="contactform.element.message.properties.label">
+                <source>Nachricht</source>
+            </trans-unit>
+            <trans-unit id="contactform.element.message.properties.placeholder">
+                <source>Nachricht</source>
+            </trans-unit>
+            <trans-unit id="contactform.element.summary.properties.label">
+                <source>Zusammenfassung</source>
+            </trans-unit>
+
+            <trans-unit id="formEditor.elements.PrivacyCheckbox.label">
+                <source>Datenschutz-Checkbox</source>
+            </trans-unit>
+            <trans-unit id="form.validator.securitycheck.notvalid">
+                <source>Entschuldigen Sie, die Sicherheitsprüfung hat Sie als Roboter eingestuft. Um die Sicherheitsprüfung zu bestehen, müssen Sie mehr Handlungen auf dieser Seite durchführen, die Typisch für einen menschlichen Besucher sind. Und JavaScript muss aktiviert sein.</source>
+            </trans-unit>
+
+        </body>
+    </file>
+</xliff>
