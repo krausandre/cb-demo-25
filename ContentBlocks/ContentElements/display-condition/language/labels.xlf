@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file datatype="plaintext" original="labels.xlf" source-language="en" date="2025-08-07T15:16:07+00:00" product-name="t3dd25/display-condition">
+		<header/>
+		<body>
+			<trans-unit id="title">
+				<source>Display Condition</source>
+			</trans-unit>
+			<trans-unit id="description">
+				<source>Description for Content Element t3dd25/display-condition</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
