@@ -1,0 +1,15 @@
+name: t3dd25/shared-partial
+typeName: t3dd25_sharedpartial
+group: t3dd25
+prefixFields: true
+prefixType: vendor
+basics:
+  - TYPO3/Appearance
+  - TYPO3/Links
+fields:
+  -
+    identifier: header
+    useExistingField: true
+  -
+      identifier: header_layout
+      useExistingField: true
