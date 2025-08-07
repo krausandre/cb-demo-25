@@ -1,3 +1,4 @@
+# extend TypoScript for content blocks to include custom layouts and partials
 lib.contentBlock {
     layoutRootPaths {
         0 = EXT:bootstrap_package/Resources/Private/Layouts/ContentElements/
