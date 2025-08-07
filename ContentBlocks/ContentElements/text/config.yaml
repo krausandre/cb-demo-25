@@ -14,3 +14,6 @@ fields:
     identifier: fieldtype_image
     type: Image
     label: New Image FieldType
+  - identifier: modified_field
+    type: Textarea
+    label: Modified Text Field
