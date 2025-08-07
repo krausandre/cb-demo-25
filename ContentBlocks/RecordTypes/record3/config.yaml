@@ -1,0 +1,7 @@
+name: t3dd25/record3
+table: tx_t3dd25_record3
+prefixFields: false
+labelField: title
+fields:
+    - identifier: title
+      type: Text

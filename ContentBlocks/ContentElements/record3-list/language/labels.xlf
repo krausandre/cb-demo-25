@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file datatype="plaintext" original="labels.xlf" source-language="en" date="2025-08-07T13:44:27+00:00" product-name="t3dd25/record3-list">
+		<header/>
+		<body>
+			<trans-unit id="title">
+				<source>Record3 List</source>
+			</trans-unit>
+			<trans-unit id="description">
+				<source>Records3 List View</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
