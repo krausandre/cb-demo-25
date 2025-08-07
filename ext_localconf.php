@@ -11,3 +11,13 @@ $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['sitepackage'] = 'EXT:sitepackage/
  */
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addUserTSConfig('@import \'EXT:sitepackage/Configuration/user.tsconfig\'');
 
+\TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerControllerActions(
+    'Sitepackage',
+    'SpPlugin',
+    [
+        \AutoDudes\Sitepackage\Controller\DemoController::class => ['list']
+    ],
+    [
+        \AutoDudes\Sitepackage\Controller\DemoController::class => []
+    ]
+);

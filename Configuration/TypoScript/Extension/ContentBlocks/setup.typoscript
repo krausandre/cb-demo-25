@@ -10,3 +10,14 @@ lib.contentBlock {
     }
     settings.responsiveimages < lib.contentElement.settings.responsiveimages
 }
+
+
+tt_content.t3dd25_extbaseplugin.20 = EXTBASEPLUGIN
+tt_content.t3dd25_extbaseplugin.20 {
+    extensionName = Sitepackage
+    pluginName = SpPlugin
+    # If your controller returns a HTML response, set the template path like this:
+    view {
+        templateRootPaths.0 = EXT:sitepackage/ContentBlocks/ContentElements/extbase-plugin/templates
+    }
+}

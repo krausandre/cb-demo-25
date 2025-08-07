@@ -1,0 +1,8 @@
+
+<br>List View:<br>
+
+<f:for each="{myRecords}" as="item" iteration="i">
+    <div class="item{f:if(condition: i.isFirst, then: ' first', else: '')}">
+        <h2>{item.title}</h2>
+    </div>
+</f:for>
