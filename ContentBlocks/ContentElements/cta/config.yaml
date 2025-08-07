@@ -24,3 +24,5 @@ fields:
     maxitems: 1
     minitems: 1
     allowed: common-image-types
+  - identifier: T3DD25/Links
+    type: Basic

@@ -7,3 +7,6 @@ fields:
   - identifier: bodytext
     useExistingField: true
     enableRichtext: true
+  -
+    identifier: T3DD25/Links
+    type: Basic

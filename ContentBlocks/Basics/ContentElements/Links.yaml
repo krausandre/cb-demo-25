@@ -1,0 +1,17 @@
+# To be used within ContentElements
+identifier: T3DD25/Links
+fields:
+  -
+    identifier: t3dd25_links_palette
+    type: Palette
+    fields:
+      -
+        identifier: link_url
+        type: Link
+        label: URL
+        prefixField: false
+      -
+        identifier: link_text
+        type: Text
+        label: Link Text
+        prefixField: false
