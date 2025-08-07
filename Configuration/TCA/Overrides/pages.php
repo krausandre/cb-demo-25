@@ -18,3 +18,12 @@ call_user_func(function()
         'Sitepackage'
     );
 });
+
+
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItemGroup(
+    'tt_content', // table
+    'CType', // typeField
+    't3dd25', // group
+    'T3DD25', // label
+    'before:default', // position
+);

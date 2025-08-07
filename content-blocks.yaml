@@ -1,0 +1,12 @@
+vendor: t3dd25
+extension: sitepackage
+content-type: content-element
+skeleton-path: Build/content-block-skeletons
+config:
+    content-element:
+        basics:
+            - TYPO3/Appearance
+            - TYPO3/Links
+        group: t3dd25
+        prefixFields: true
+        prefixType: vendor
