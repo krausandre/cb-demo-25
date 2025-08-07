@@ -8,3 +8,4 @@ fields:
     foreign_table: tt_content
     allowedRecordTypes:
       - example_text
+      - example_cta

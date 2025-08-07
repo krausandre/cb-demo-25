@@ -1,7 +1,7 @@
 ######################
 #### BASICS       ####
 ######################
-@import 'EXT:sitepackage/Configuration/TypoScript/Basics/constants.typoscript'
+# @import 'EXT:sitepackage/Configuration/TypoScript/Basics/constants.typoscript'
 
 
 ############

@@ -1,7 +1,7 @@
 ######################
 #### BASICS       ####
 ######################
-@import 'EXT:sitepackage/Configuration/TypoScript/Basics/setup.typoscript'
+# @import 'EXT:sitepackage/Configuration/TypoScript/Basics/setup.typoscript'
 @import 'EXT:sitepackage/Configuration/TypoScript/Extension/ContentBlocks/setup.typoscript'
 
 
@@ -9,3 +9,14 @@
 [applicationContext == "Development"]
     config.contentObjectExceptionHandler = 0
 [END]
+
+
+page = PAGE
+page.10 = PAGEVIEW
+page.10 {
+  paths.10 = EXT:sitepackage/Resources/Private/Templates
+  dataProcessing {
+    10 = page-content
+    20 = content-blocks
+  }
+}
