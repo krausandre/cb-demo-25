@@ -1,4 +1,6 @@
 <html
+    xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
     data-namespace-typo3-fluid="true"
 >
 
@@ -9,7 +11,9 @@
 </f:section>
 
 <f:section name="Content">
+    <cb:link.editRecord uid="{data.uid}" table="{data.mainType}">
     Preview for Content Block: t3dd25/record3-list
+    </cb:link.editRecord>
 </f:section>
 
 <f:comment>

@@ -1,7 +1,7 @@
 ######################
 #### BASICS       ####
 ######################
-# @import 'EXT:sitepackage/Configuration/TypoScript/Basics/setup.typoscript'
+@import 'EXT:sitepackage/Configuration/TypoScript/Basics/setup.typoscript'
 @import 'EXT:sitepackage/Configuration/TypoScript/Extension/ContentBlocks/setup.typoscript'
 
 
